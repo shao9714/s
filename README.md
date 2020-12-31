@@ -29,4 +29,3 @@ For alignments, we were given with a name of the transcript in question, its ori
 
 We used the Expectation Maximization algorithm to achieve this and followed a provided model with a set of computation steps.
 
-https://hackmd.io/@PI7Og0l1ReeBZu_pjQGUQQ/HkhyTMYOU
