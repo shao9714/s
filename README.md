@@ -29,3 +29,14 @@ For alignments, we were given with a name of the transcript in question, its ori
 
 We used the Expectation Maximization algorithm to achieve this and followed a provided model with a set of computation steps.
 
+| Method      | Description |
+| ----------- | ----------- |
+| fullEM()     | The full EM algorithm. Its core function follows the implementation logic provided by the hackmd.io page. It is also responsible for calling storeEffL() which calculates and stores the effective lengths of the transcripts, setUpReadsP() which evaluates and stores the p_2, p_3, and p_4 values for all reads, and initialEStep() which performs the first iteration of the EM algorithm. It uses converged() to determine if the EM algorithm is completed.      |
+| converged()   | fullEM()’s utility method. Determines if the EM algorithm has converged by comparing all current p_1 values with the p_1 values from the previous iteration. It calls equalUpTo() to determine convergence between two values.        |
+| equalUpTo()    | converged()’s utility method. Determines if two doubles can be considered equal by being equal up to a certain decimal place. |
+| initialEStep() | fullEM()’s utility method. Carries out the first E-step of the EM algorithm. Evaluates the probability count of each transcript appearing using p_1 =1/M. |
+| storeEffL()    | fullEM()'s utility method. Calculates the effective length for all transcripts by calling effectiveLength(). |
+| setUpReadsP()  | fullEM()'s utility method. Sets up the probability values for all reads. |
+| effectiveLength()| storeEffL()’s utility method. Computes the effective lengths for all transcripts.|
+| writeFile()    | Utility method for writing the resulting estimates and lengths for all transcripts.|
+| readFile()     | Utility method for reading and processing all data from the input file.|
