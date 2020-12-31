@@ -18,4 +18,15 @@ The following commands execute the standard full EM algorithm. The specific para
 java -cp ".:./commons-math3-3.6.1/commons-math3-3.6.1.jar" squant --in /data/alignments.cs423 --out results.tsv
 or equivalently
 java -cp ".:./commons-math3-3.6.1/commons-math3-3.6.1.jar" squant --out results.tsv --in data/alignments.cs423
+
 # squant
+This project is about simulating the quantification of RNA transcripts as RNA sequencing would. 
+We were provided with a set of RNA transcripts and their alignments to the original DNA sequence. 
+
+For the transcripts, we were given with a name for the transcript and its length.
+
+For alignments, we were given with a name of the transcript in question, its orientation, the position of the alignment, and the probability for alignment.
+
+We used the Expectation Maximization algorithm to achieve this and followed a provided model with a set of computation steps.
+
+https://hackmd.io/@PI7Og0l1ReeBZu_pjQGUQQ/HkhyTMYOU
